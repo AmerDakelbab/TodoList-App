@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+    font-family: Josefin Sans;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-family: Josefin Sans;
+}
+
+.dark .background-image {
+    background-image: url(../images/bg-desktop-dark.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.light .background-image {
+    background-image: url(../images/bg-desktop-light.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.dark .zindex,
+.light .zindex {
+    position: relative;
+    z-index: 2;
+}
+
+.dark .header,
+.light .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 31em;
+    margin-top: 1em;
+}
+
+.dark .title {
+    color: hsl(0, 0%, 98%);
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.light .title {
+    color: hsl(0, 0%, 98%);
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.dark .sun-button,
+.light .sun-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.dark .creating-todo {
+    display: flex;
+    background-color: hsl(235, 24%, 19%);
+    height: 5em;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 2em;
+    border-radius: 5px;
+}
+
+.light .creating-todo {
+    display: flex;
+    background-color: hsl(0, 0%, 99%);
+    height: 5em;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 2em;
+    border-radius: 5px;
+
+}
+
+.dark .text-input,
+.light .text-input {
+    background-color: transparent;
+    border: none;
+    font-size: 1.4em;
+    width: 100%;
+    height: 100%;
+    margin-left: 1.8em;
+}
+
+.dark .text-input:focus,
+.light .text-input:focus {
+    border: none;
+    color: hsl(234, 39%, 85%);
+    outline: none;
+}
+
+.dark .text-input::placeholder,
+.light .text-input::placeholder {
+    color: hsl(234, 11%, 52%);
+}
+
+.dark .todo-list {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(235, 24%, 19%);
+    height: 4.5em;
+    align-items: center;
+    border-bottom: 1px hsl(233, 14%, 35%) solid;
+    border-radius: 5px;
+}
+
+.light .todo-list {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(0, 0%, 99%);
+    height: 4.5em;
+    align-items: center;
+    border-bottom: 1px hsl(233, 11%, 84%) solid;
+    border-radius: 5px;
+}
+
+.dark .task-p {
+    font-size: 1.5em;
+    margin-left: 1.5em;
+}
+
+.light .task-p {
+    font-size: 1.5em;
+    margin-left: 1.5em;
+
+}
+
+.dark .cross,
+.light .cross {
+    position: absolute;
+    right: 25px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.dark .cross img,
+.light .cross img {
+    width: 1.5em;
+    height: 1.8em;
+}
+
+.dark .check-button {
+    border: 1px solid hsl(233, 14%, 35%);
+    border-radius: 50%;
+    width: 2.7em;
+    height: 2.5em;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: 2em;
+    transition: box-shadow 0.1s ease;
+}
+.light .check-button {
+    border: 2px solid hsl(233, 11%, 84%);
+    border-radius: 50%;
+    width: 2.7em;
+    height: 2.5em;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: 2em;
+    transition: box-shadow 0.1s ease; 
+
+}
+
+
+.dark .check,
+.light .check {
+    background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    padding: 7px;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.dark .bottom-part {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(235, 24%, 19%);
+    height: 3.5em;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.light .bottom-part {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(0, 0%, 98%);
+    height: 3.5em;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.dark .tasks-left-p {
+    color: hsl(233, 14%, 35%);
+    margin-left: 25px;
+}
+
+.light .tasks-left-p {
+    color: hsl(236, 9%, 61%);
+    margin-left: 25px;
+}
+
+.dark .buttons {
+    border: none;
+    background-color: transparent;
+    color: hsl(233, 14%, 35%);
+    font-weight: bold;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.light .buttons {
+    border: none;
+    background-color: transparent;
+    color: hsl(236, 9%, 61%);
+    font-weight: bold;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.dark .clear-button,
+.light .clear-button {
+    margin-right: 20px;
+}
+
+.dark .buttons:focus,
+.dark .buttons:active,
+.light .buttons:focus,
+.light .buttons:active {
+    color: hsl(220, 98%, 61%);
+}
+
+.dark .buttons:hover {
+    color: hsl(234, 39%, 85%);
+}
+.light .buttons:hover {
+    color: hsl(235, 19%, 35%);
+}
+
+.dark .check-button:hover,
+.light .check-button:hover {
+    box-shadow: 0 0 0 1px hsl(192, 100%, 67%), 0 0 0 2px hsl(280, 87%, 65%);
+}
+@media (max-width: 768px) {
+
+    .dark .background-image {
+        background-image: url(../images/bg-mobile-dark.jpg);
+    }
+    
+    .light .background-image {
+        background-image: url(../images/bg-mobile-light.jpg);
+    }
+    .dark .header,
+    .light .header {
+        display: flex;
+        justify-content: space-between;
+        width: 28em;
+        margin-right: 0;
+        margin-top: -1em;
+        margin-left: -6em;
+        margin-bottom: 2.5em;
+    }
+    
+    .dark .title {
+        font-size: 2em;
+    }
+    
+    .light .title {
+        font-size: 2em;
+    }
+    .dark .creating-todo {
+        height: 4.5em;
+        margin-bottom: 2em;
+        width: 28em;
+        margin-left: -6em;
+    }
+    
+    .light .creating-todo {
+        height: 4.5em;
+        margin-bottom: 2em;
+        width: 28em;
+        margin-left: -6em;
+    }
+    
+    .dark .text-input,
+    .light .text-input {
+        font-size: 1em;
+    }
+    .dark .todo-list {
+        height: 4em;
+        width: 28em;
+        margin-left: -6em;
+    }
+    
+    .light .todo-list {
+        height: 4em;
+        width: 28em;
+        margin-left: -6em;
+    }
+    
+    .dark .task-p {
+        font-size: 1em;
+    }
+    
+    .light .task-p {
+        font-size: 1em;
+    }
+    
+    
+    .dark .cross img,
+    .light .cross img {
+        width: 1em;
+        height: 1.2em;
+    }
+    
+    .dark .check-button {
+        width: 2em;
+        height: 2em;
+    }
+    .light .check-button {
+        width: 2em;
+        height: 2em;
+    }
+    
+    
+    .dark .check,
+    .light .check {
+        width: 2.1em;
+        height: 2em;
+    }
+    
+    .dark .bottom-part {
+        width: 28em;
+        margin-left: -6em;
+    }
+    
+    .light .bottom-part {
+        width: 28em;
+        margin-left: -6em;
+    }
+}
